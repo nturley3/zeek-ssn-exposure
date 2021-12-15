@@ -87,7 +87,7 @@ event line(description: Input::EventDescription, tpe: Input::Event, s: string)
     add ssn_list[s];
 }
 
-event bro_init() &priority=5
+event zeek_init() &priority=5
 {
     # Create the new ssn_exposure logging stream
 	Log::create_stream(SsnExposure::LOG, [$columns=Info, $path="ssn_exposure_payload"]);
